@@ -45,7 +45,7 @@ const info = {
       });
 
       //   console.log(text);
-      //   console.log(type);
+      console.log(type);
 
       //   showNotification(text, type);
     }
