@@ -1,6 +1,9 @@
-export default fetchCountries(searchQuery);
-// возвращаtn промис с массивом стран, результат запроса к API.
+const fetchCountries = searchQuery => {
+  const MAIL_URL = 'https://restcountries.eu/rest/v2/name/';
+  let url = `${MAIL_URL}${searchQuery}`;
+  return fetch(url)
+    .then(res => res.json())
+    .catch(err => console.log(err));
+};
 
-// https://restcountries.eu/rest/v2/name/{name}
-// https://restcountries.eu/rest/v2/name/eesti
-// https://restcountries.eu/rest/v2/name/united
+export default fetchCountries;
