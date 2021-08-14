@@ -16,6 +16,18 @@ body {
    */
   background-image: url('../images/skulls.png');
 }
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  margin-right: 50px;
+
+  min-width: 60%;
+  height: auto;
+}
 
 .search-input {
   min-width: 500px;
@@ -30,4 +42,17 @@ body {
 .country-container {
   display: flex;
   margin-top: 40px;
+
+  /* outline: 2px solid tomato; */
+}
+
+.country-container > ul {
+  font-size: xx-large;
+  text-align: left;
+  font-weight: 400;
+}
+
+.country-container__list {
+  font-weight: 700;
+  text-align: left;
 }

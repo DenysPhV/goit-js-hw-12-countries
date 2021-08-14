@@ -5,13 +5,16 @@ import countryContainerHbs from '../templates/container-country.hbs';
 const render = {
   countriesItem(data) {
     const markup = countriesItemHbs(data);
-    refs.countryContainer.innerHTML = '';
-    refs.countryContainer.insertAdjacentHTML('beforeend', markup);
+    refsComponent(markup);
   },
   country(data) {
     const markup = countryContainerHbs(...data);
-    refs.countryContainer.innerHTML = '';
-    refs.countryContainer.insertAdjacentHTML('beforeend', markup);
+    refsComponent(markup);
   },
 };
+
+function refsComponent(markup) {
+  refs.countryContainer.innerHTML = '';
+  refs.countryContainer.insertAdjacentHTML('beforeend', markup);
+}
 export default render;
