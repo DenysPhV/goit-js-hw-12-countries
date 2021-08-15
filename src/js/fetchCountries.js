@@ -1,6 +1,7 @@
 const fetchCountries = searchQuery => {
-  const MAIL_URL = 'https://restcountries.eu/rest/v2/name/';
-  let url = `${MAIL_URL}${searchQuery}`;
+  const BASE_URL = 'https://restcountries.eu/rest/v2/name/';
+  let url = `${BASE_URL}${searchQuery}`;
+  // переписал then  думаю как обработать ошибку от пробела
   return fetch(url)
     .then(response => response.json())
     .catch(error => console.log(error));

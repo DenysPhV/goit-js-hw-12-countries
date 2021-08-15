@@ -17,4 +17,5 @@ function refsComponent(markup) {
   refs.countryContainer.innerHTML = '';
   refs.countryContainer.insertAdjacentHTML('beforeend', markup);
 }
+
 export default render;

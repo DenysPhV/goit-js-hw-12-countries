@@ -4,7 +4,7 @@ import '@pnotify/core/dist/BrightTheme.css';
 import { alert } from '@pnotify/core/dist/PNotify';
 
 import render from './render';
-// подумать над рефракторингом
+
 const info = {
   showResult(data) {
     const countriesCount = data.length;
@@ -13,20 +13,14 @@ const info = {
       const text = 'Too many matches found. Please enter a more specific query!';
       const type = 'info';
 
-      //   console.log(text);
-      //   console.log(type);
-
       showNotification(text, type);
     } else if (countriesCount >= 2 && countriesCount <= 10) {
       render.countriesItem(data);
-    } else if (countriesCount === 1) {
+    } else if (countriesCount <= 1) {
       render.country(data);
     } else {
       const text = 'No matches found';
       const type = 'error';
-
-      //   console.log(text);
-      //   console.log(type);
 
       showNotification(text, type);
     }
