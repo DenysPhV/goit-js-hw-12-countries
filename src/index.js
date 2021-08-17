@@ -12,7 +12,9 @@ const onSearch = event => {
   if (searchQuery) {
     fetchCountries(searchQuery)
       .then(info.showResult)
-      .catch(error => error);
+      .catch(error => {
+        alert('You hit the space bar! Please enter only letters.');
+      });
   }
 };
 
