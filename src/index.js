@@ -10,9 +10,9 @@ const onSearch = event => {
   const searchQuery = event.target.value;
 
   if (searchQuery) {
-    fetchCountries(searchQuery.trim())
+    fetchCountries(searchQuery)
       .then(info.showResult)
-      .catch(error => console.log(error));
+      .catch(error => error);
   }
 };
 

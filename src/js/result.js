@@ -1,6 +1,7 @@
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/desktop/dist/PNotifyDesktop';
 import '@pnotify/core/dist/BrightTheme.css';
+
 import { alert } from '@pnotify/core/dist/PNotify';
 
 import render from './render';
@@ -32,7 +33,7 @@ function showNotification(text, type) {
     type: `${type}`,
     text: `${text}`,
     mode: 'light',
-    delay: 2000,
+    delay: 500,
     sticker: false,
     maxTextHeight: null,
     addClass: 'notification',
